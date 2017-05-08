@@ -1,0 +1,90 @@
+File: game_draft.txt
+Author: Marquis Massie
+Description: Game concept Document to detail the logic, technologies, and implementation of the game
+Author Email: massiemarquis@gmail.com
+Company URL: N/A
+Version: 1.0
+
+Description of Traditional Game
+    Two players have a finite number of pieces. Each player must strategically place there pieces within the board to have four pieces connected together in either a vertical, horizontal, or diagnol orienation. If a player successfully has the four connected peices the game is over
+    
+Computer Version
+    - Include an option to play against a computer
+    
+Technologies to use
+    - HTML5
+    - CSS/SASS
+    - Jquery/JavaScript
+    
+Game logic (Chronological Order)
+-- Until a player/comp has a winning set --
+1. User selects game mode
+2. Single-Player
+    1. User picks a color
+    2. coin flip to see which player goes first
+    3. first player clicks in the space they would like to place their piece
+    4. check if the player's move is legal
+    5. check for winning set
+    5. update player number of pieces
+    6. repeat step 3 - 5 for next player
+3. Multiplayer
+    1. coin flip to see which player goes first
+    2. first player picks a color
+    3. first player clicks in the space they would like to place their piece
+    4. check if the player's move is legal
+    5. check for winning set
+    5. update player number of pieces
+    6. repeat steps 3 - 5 for next player
+    
+    
+User Stoires
+- I want to be able to choose from a range of different colors (Players cannot be the same color)
+- I want to be able to have chance play a factor for choosing who goes first
+- I want a visual of the chance roll
+- I want to be able to have game audio
+- I want a description of the rules
+- I want a menu
+- I want to be able to end the game whenever I want
+
+Game Objects
+- Player
+    - piece
+        - piece color
+        - player number (1 or 0)
+    - number of pieces
+    Functions
+        - choose color
+        - make (legal) move
+        - update number of pieces
+- Game Board
+    - number of slots
+    - color
+    Functions
+        - menu
+            -turn off audio
+            - quit game
+        - check for legal move
+        - check for winning set
+        - coin flip
+        - color picker
+
+File Struture
+Connect-four
+    Local
+        - main_page.html
+        - game_board.html
+        - style.css
+        - connect_four.js
+        css
+            - board-style.css
+            - menu.css
+            - normalize.css
+        js
+            - coin_fip.js
+            - color_picker.js
+            - menu.js
+            Jquery
+                - jquery.min.css
+        assets
+            images
+            audio
